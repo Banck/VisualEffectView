@@ -46,9 +46,7 @@ private extension UIVisualEffectView {
         return overlayView?.value(forKey: "viewEffects", withFilterType: "sourceOver")
     }
     func prepareForChanges() {
-        if self.effect is UIBlurEffect == false {
-            self.effect = UIBlurEffect(style: .light)
-        }
+        self.effect = UIBlurEffect(style: .light)
         gaussianBlur?.setValue(1.0, forKeyPath: "requestedScaleHint")
     }
     func applyChanges() {
